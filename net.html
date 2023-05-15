@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub API Form</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label, input, select, button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body style="background-color:#68ACE5;">
+    <form id="api-form" action="http://34.29.219.142:8081/api/submit" method="post">
+        <label for="src_ip">Source IP:</label>
+        <input type="text" id="src_ip" name="src_ip" required>
+
+        <label for="dst_ip">Destination IP:</label>
+        <input type="text" id="dst_ip" name="dst_ip" required>
+
+        <label for="dst_port">Destination Port:</label>
+        <input type="number" id="dst_port" name="dst_port" required>
+
+        <label for="acc_auth">Account Auth:</label>
+        <select id="acc_auth" name="acc_auth" required>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+            <option value="unknown">Unknown</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
